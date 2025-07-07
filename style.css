@@ -38,7 +38,36 @@ body {
     opacity: 1;
   }
 }
+.slide {
+  flex: 0 0 auto;
+  width: 100%; /* make each slide full width */
+  box-sizing: border-box;
+  padding: 1rem;
+}
 
+.slides {
+  display: flex;
+  overflow-x: auto;
+}
+.slider-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  padding: 1rem;
+  box-sizing: border-box;
+}
 /* LEFT SIDE */
 .left-side {
   flex-shrink: 0;
